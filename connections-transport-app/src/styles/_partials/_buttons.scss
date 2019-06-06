@@ -1,0 +1,57 @@
+// Nice justifies two buttons in the centre of the page
+.button-pair {
+	display: flex;
+	justify-content: center;
+}
+
+// Common button styles
+.button {
+	border: 1px solid red;
+	padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  color:#000;
+  text-decoration: none;
+	display: inline-block;
+	box-sizing: border-box;
+	min-width: 120px;
+	text-align: center;
+	margin: 10px;
+	
+	// Removes annoying highlight on some browsers
+	&:focus {
+    	outline: none !important;
+	}
+
+	// Proceed step button
+	&.positive {
+		border: 1px solid #33aa33;
+		color:#33aa33;
+		transition: all 0.1s linear;
+
+		&:hover {
+			color:#fff;
+			background: #33aa33;
+		}
+	}
+
+	// Cancel/go back a step button
+	&.negative {
+		border: 1px solid #cf2222;
+		color:#cf2222;
+		transition: all 0.1s linear;
+
+	&:hover {
+		color:#fff;
+		background: #cf2222;	
+		}
+	}
+	
+	// For larger button - from wireframe for add new.
+	&.centre {
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		width: 80%;
+	}
+}

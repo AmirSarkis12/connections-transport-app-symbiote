@@ -11,7 +11,7 @@ function Home() {
         <div>
             <h2 className="title">My Connections</h2>
             {placeholder.connections > 0 ? null : <p className="message">You do not have any connections.</p>}
-            <ButtonRoute classes="button" link="newconnection" label="Add New" />
+            <ButtonRoute classes="button positive centre" link="newconnection" label="Add New" />
             {/* To Do: Route to connections page */}
         </div>
     );
@@ -21,7 +21,8 @@ function NewConnection() {
     return (
         <div>
             <h2 className="title">New Connection</h2>
-            <ButtonRoute classes="button" link="" label="Cancel" />
+            <p>Form elemnts to go here...</p>
+            <ButtonRoute classes="button negative" link="" label="Cancel" />
         </div>
     );
 }
