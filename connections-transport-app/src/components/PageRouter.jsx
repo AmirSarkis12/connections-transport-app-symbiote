@@ -1,18 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { ButtonRoute } from './Buttons';
 import Home from './Home';
-import ConnectionOption from './ConnectionSelector'
-
-function NewConnection() {
-    return (
-        <div>
-            <h2 className="title">New Connection</h2>
-            <ConnectionOption />
-            <ButtonRoute classes="button negative" link="" label="Cancel" />
-        </div>
-    );
-}
+import ConnectionList from './ConnectionList'
+import NewConnection from './NewConnection'
 
 // Basic button
 class PageRouter extends React.Component {
@@ -22,6 +12,7 @@ class PageRouter extends React.Component {
                 <div>
                     <Route path="/" exact component={Home} />
                     <Route path="/newconnection/" component={NewConnection} />
+                    <Route path="/connectionlist/" component={ConnectionList} />
                     <Router history={this.props.history} />
                 </div>
             </Router>

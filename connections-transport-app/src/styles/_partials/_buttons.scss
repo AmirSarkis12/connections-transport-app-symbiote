@@ -51,3 +51,14 @@
 		width: 80%;
 	}
 }
+
+.text-button {
+    font-size: 22px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+}

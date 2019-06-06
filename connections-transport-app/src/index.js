@@ -8,29 +8,28 @@ import { App } from './App';
 import * as serviceWorker from './serviceWorker';
 
 const State = {
+  currentConnection: null,
   connections: []
 };
 
-// const State = {
-//   connections: [
-//     {connections
-//       title: null,
-//       stops: []
-//     }
-//   ]
-// };
-
-
 function reducer(state = State, action) {
   switch (action.type) {
-    case 'ADDCONNECTION':
-      const newState = state.connections.slice();
-      newState.push(action.value);
+    case 'ADDCONNECTION': {
+      const newConnections = state.connections.slice();
+      newConnections.push(action.value);
       return {
-        connections: newState
-      };
-    default:
+        connections: newConnections
+      }
+    }
+    case 'SELECTCONNECTION': {
+      const newCurrentConnection = action.value;
+      return {
+        currentConnection: newCurrentConnection
+      }
+    }
+    default: {
       return state;
+    }
   }
 }
 

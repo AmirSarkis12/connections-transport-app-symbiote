@@ -15,7 +15,6 @@ class ConnectionSelector extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
   // Create a new connection object for adding to app state
   collateInput = (event) => {
     return {
@@ -66,7 +65,8 @@ class ConnectionSelector extends React.Component {
 // Simplify component state as a subset of application state
 function mapStateToProps(state) {
   return {
-    connections: state.connections
+    connections: state.connections,
+    currentConnection: state.currentConnection
   };
 }
 
