@@ -3,6 +3,7 @@ import DataSet from '../example-data.js'
 import { history } from '../App'
 import { Button, ButtonRoute } from './Buttons'
 
+// Connection selector form populated from example-data.js
 class ConnectionSelector extends React.Component {
     onFormSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +19,8 @@ class ConnectionSelector extends React.Component {
                         Name:
                         <input type="text" name="name" />
                     </label>
+
+                    {/* To Do: Populate forms with staton information */}
                     <select name="stop-1" />
                     <select name="stop-2" />
                     <select name="stop-3" />
