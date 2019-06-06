@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Button, ButtonRoute } from './Buttons';
+import { ButtonRoute } from './Buttons';
 import Home from './Home';
 import ConnectionOption from './ConnectionSelector'
 

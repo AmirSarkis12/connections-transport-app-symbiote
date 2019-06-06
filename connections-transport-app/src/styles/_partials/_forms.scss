@@ -1,1 +1,26 @@
-// To Do: Style New Connection Form elements
+.connection-selector-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+
+  .button {
+    margin: 20px 0 0;
+  }
+
+  .name-input {
+    height: 34px;
+    padding: 0 20px;
+    font-size: 14px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ababab;
+  }
+
+  select {
+    height: 34px;
+    font-size: 14px;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+}

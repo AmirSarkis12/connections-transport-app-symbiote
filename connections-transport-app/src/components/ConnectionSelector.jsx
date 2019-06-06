@@ -1,7 +1,7 @@
 import React from 'react';
 import DataSet from '../example-data.js'
 import { history } from '../App'
-import { Button, ButtonRoute } from './Buttons'
+import { Button } from './Buttons'
 import { connect } from 'react-redux';
 
 const sanitiseRoutes = () => {
@@ -24,17 +24,13 @@ class ConnectionSelector extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onFormSubmit}>
-            <label>
-                Name:
-                <input type="text" name="name" />
-            </label>
+        <form class="connection-selector-form" onSubmit={this.onFormSubmit}>
+            <input class="name-input" type="text" name="name" placeholder="Name" />
             {/* To Do: Populate forms with staton information */}
             <select name="stop-1" />
             <select name="stop-2" />
             <select name="stop-3" />
             <Button classes="button positive" link="" label="Save" />
-            <h2>{this.props.count}</h2>
         </form>
       </div>
     );
