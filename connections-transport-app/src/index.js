@@ -7,23 +7,35 @@ import { App } from './App';
 
 import * as serviceWorker from './serviceWorker';
 
-const initialState = {
-    count: 0,
-    connections: []
+const State = {
+  connections: []
 };
 
-function reducer(state = initialState, action) {
-    switch (action.type) {
-        case 'INCREMENTCOUNT':
-            return {
-                count: state.count + 1
-            };
-        default:
-            return state;
-    }
+// const State = {
+//   connections: [
+//     {connections
+//       title: null,
+//       stops: []
+//     }
+//   ]
+// };
+
+
+function reducer(state = State, action) {
+  switch (action.type) {
+    case 'ADDCONNECTION':
+      const newState = state.connections.slice();
+      newState.push(action.value);
+      return {
+        connections: newState
+      };
+    default:
+      return state;
+  }
 }
 
 const store = createStore(reducer);
+
 render(
     <Provider store={store}>
         <App />

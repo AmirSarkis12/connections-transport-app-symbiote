@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ButtonRoute } from './Buttons';
 import Home from './Home';
 import ConnectionOption from './ConnectionSelector'
